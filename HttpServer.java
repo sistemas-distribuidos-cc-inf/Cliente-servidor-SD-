@@ -8,14 +8,14 @@ import java.net.Socket;
 public class HttpServer {
 
 	public static void main(String[] args) throws Exception {
-		// TODO Auto-generated method stub
+		//TODO Auto-generated method stub
 		int port = 8082;
 	    ServerSocket serverSocket = new ServerSocket(port);
 	    System.err.println("O server esta rodando na porta : " + port);
 
-	    // esperando pela conexao
+	    //Esperando pela conexao
 	    while (true) {
-	        // Aceita uma nova conexao
+	        //Aceita uma nova conexao
 	        Socket clientSocket = serverSocket.accept();
 	        System.err.println("Um novo cliente connectou");
 	        
@@ -43,8 +43,8 @@ public class HttpServer {
 	        out.write("<TITLE>ServerHTTP</TITLE>");
 	        out.write("<P>Servidor teste HTTPServer</P>");
 
-	        //Fecha a conex„o e encerra o request.
-	        System.err.println("Conex„o encerrada");
+	        //Fecha a conex√£o e encerra o request.
+	        System.err.println("Conex√£o encerrada");
 	        out.close();
 	        in.close();
 	        clientSocket.close();
