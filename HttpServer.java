@@ -5,16 +5,16 @@ import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class HttpServer {
+public class HttpServer{
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception{
 		//TODO Auto-generated method stub
 		int port = 8082;
 	    ServerSocket serverSocket = new ServerSocket(port);
 	    System.err.println("O server esta rodando na porta : " + port);
 
 	    //Esperando pela conexao
-	    while (true) {
+	    while (true){
 	        //Aceita uma nova conexao
 	        Socket clientSocket = serverSocket.accept();
 	        System.err.println("Um novo cliente connectou");
@@ -25,9 +25,9 @@ public class HttpServer {
 	        
 	        //Faz a leitura do buffer de entrada
 	        String s;
-	        while ((s = in.readLine()) != null) {
+	        while ((s = in.readLine()) != null){
 	            System.out.println(s);
-	            if (s.isEmpty()) {
+	            if (s.isEmpty()){
 	                break;
 	            }
 	        }
