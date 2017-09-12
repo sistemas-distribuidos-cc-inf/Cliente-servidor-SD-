@@ -34,7 +34,17 @@ public class ClientHttp {
 		//Escreve o protocolo http no servidor
 		out.println(protocolHttp);
 		
-		
+		//Recebe do servidor a resposta e escreve na saida default do cliente
+		try {
+			String lineResponse = in.readLine();
+			while(lineResponse != null) {
+				System.out.println(lineResponse);
+				lineResponse = in.readLine();
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 						
 	}
 
